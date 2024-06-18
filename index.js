@@ -11,7 +11,7 @@ app.use(router);
 app.use(bodyParser.json());
 app.use(cors({
     credentials: true,
-    origin: ["http://localhost:5173", "https://zynfinity.my.id", "http://127.0.0.1:5500", "http://localhost:49974/"]
+    origin: ["http://localhost:5173", "https://zynfinity.my.id", "http://127.0.0.1:5500", "https://ig-clone-react-three.vercel.app"]
 }));
 
 // Validasi token Login
