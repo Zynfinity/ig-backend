@@ -10,7 +10,8 @@ import { fileURLToPath } from 'url';
 import { Follow } from "../controllers/Follows.js";
 import { newComment } from "../controllers/Comments.js";
 import { supabase } from "../config/supabase.js";
-import { allChat, chatWith, sendMsg } from "../controllers/Chats.js";
+import { allChat, chatWith, createRoom, sendMsg } from "../controllers/Chats.js";
+import { addLike } from "../controllers/Likes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -48,4 +49,8 @@ router.post('/api/comment/new', newComment);
 router.post('/api/chat/all', allChat);
 router.post('/api/chat', chatWith);
 router.post('/api/chat/send', sendMsg);
+router.post('/api/chat/new', createRoom);
+
+// like
+router.post('/api/like', addLike);
 export default router;
